@@ -1,3 +1,5 @@
+# Посчитать количество новых пользователей для каждой страны за весь январь.
+
 SELECT a.first_country,
       COUNT(DISTINCT CASE WHEN installed_at = created_at THEN user_id END) AS new_users
 FROM (
