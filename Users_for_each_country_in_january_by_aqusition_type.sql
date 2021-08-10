@@ -3,7 +3,7 @@
 SELECT  first_country,
         DATE(created_at) AS created_date,
         COUNT(DISTINCT CASE WHEN is_organic = 1 THEN user_id END) AS organic_dau,
-        count(DISTINCT CASE WHEN is_organic = 0 THEN user_id END) AS non_organic_dau
+        COUNT(DISTINCT CASE WHEN is_organic = 0 THEN user_id END) AS non_organic_dau
 FROM (
       SELECT user_id,
             created_at,
