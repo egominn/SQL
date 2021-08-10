@@ -1,3 +1,5 @@
+-- Посчитать количество новых пользователей для каждой страны на каждый день января. Разделить по acquisition type.
+
 SELECT  first_country,
         DATE(installed_at) AS installed_date,
         COUNT(DISTINCT CASE WHEN installed_at = created_at AND is_organic = 1 THEN user_id END) AS new_organic_users,
