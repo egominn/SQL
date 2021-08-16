@@ -2,8 +2,8 @@
 
 SELECT
       c.*,
-      CAST(total_conversions AS double precision) / CAST(cohort_size AS double precision) AS cum_conversion_rate,
-      total_purchases_revenue / CAST(cohort_size AS double precision) AS CARPU
+      CAST(total_conversions AS DOUBLE PRECISION) / CAST(cohort_size AS DOUBLE PRECISION) AS cum_conversion_rate,
+      total_purchases_revenue / CAST(cohort_size AS DOUBLE PRECISION) AS CARPU
 FROM (
        SELECT
              b.*,
